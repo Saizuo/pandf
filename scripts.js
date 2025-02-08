@@ -104,7 +104,7 @@ async function copyText(text) {
         button.classList.add('copied');
         
         setTimeout(() => {
-            button.textContent = 'Copy CA';
+            button.textContent = 'CA : Coming Soon';
             button.classList.remove('copied');
         }, 2000);
     } catch (err) {
