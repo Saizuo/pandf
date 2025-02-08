@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P&F 500 | Tech Memecoins</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                P<span>&</span>F<span>500</span>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="active" style="text-decoration: none;">Top 100</a>
+                <a href="#" style="text-decoration: none;">Trending</a>
+                <a href="#" style="text-decoration: none;">New</a>
+            </div>
+        </div>
+    </nav>
+<!-- Add this right after the nav -->
+<div class="stock-ticker">
+    <ul id="ticker-content"></ul>
+    <ul id="ticker-content-clone"></ul>
+</div>
+    <main>
+        <section class="hero">
+            <h1> King of Memes</h1>
+            <div class="top-performers">
+                <!-- Top 3 Coins -->
+                <div class="top-coin">
+                    <img src="placeholder1.png" alt="Coin 1">
+                    <div class="coin-info">
+                        <h2>TechCoin</h2>
+                        <p class="price">$1.234</p>
+                        <p class="change positive">+25.6%</p>
+                    </div>
+                </div>
+                <!-- Repeat for other top performers -->
+            </div>
+        </section>
+
+        <section class="coin-grid">
+            <!-- Grid of remaining coins -->
+        </section>
+    </main>
+</body>
+</html>
+
+<!-- Add this before closing body tag -->
+<script src="scripts.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', initializeApp);
+</script>
