@@ -95,3 +95,16 @@ function updateTickerContent(coins) {
 }
 
 document.addEventListener('DOMContentLoaded', initializeApp);
+
+// Add this function
+function copyText(text) {
+    navigator.clipboard.writeText(text);
+    const button = document.querySelector('.copy-button');
+    button.textContent = 'Copied!';
+    button.classList.add('copied');
+    
+    setTimeout(() => {
+        button.textContent = 'Soon';
+        button.classList.remove('copied');
+    }, 2000);
+}

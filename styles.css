@@ -373,3 +373,24 @@ main {
 .stock-ticker .minus .change {
     color: #ff4d4d;
 }
+
+.copy-button {
+    font-family: 'Orbitron', sans-serif;
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.copy-button:hover {
+    background: var(--primary);
+    color: var(--bg);
+}
+
+.copy-button.copied {
+    background: var(--primary);
+    color: var(--bg);
+}
