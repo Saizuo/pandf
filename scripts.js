@@ -34,7 +34,7 @@ function renderTopPerformers(coins) {
 }
 
 function renderCoinGrid(coins) {
-    const remainingCoins = coins.slice(3);
+    const remainingCoins = coins.slice(3, 25); // Show only coins 4-25
     const coinGridContainer = document.querySelector('.coin-grid');
     
     coinGridContainer.innerHTML = remainingCoins.map(coin => `
@@ -53,6 +53,32 @@ function renderCoinGrid(coins) {
         </div>
     `).join('');
 }
+
+document.querySelector('.see-all-button').addEventListener('click', () => {
+    const coins = globalCoins;
+    const remainingCoins = coins.slice(25); // Show coins after 25
+    const coinGridContainer = document.querySelector('.coin-grid');
+    
+    // Add remaining coins to the grid
+    const additionalHtml = remainingCoins.map(coin => `
+        <div class="coin-card" onclick="window.open('https://www.coingecko.com/en/coins/${coin.id}', '_blank')">
+            <div class="coin-card-content">
+                <img src="${coin.image}" alt="${coin.name}">
+                <div class="coin-details">
+                    <h3>${coin.name}</h3>
+                    <p class="symbol">${coin.symbol.toUpperCase()}</p>
+                    <p class="price">${formatPrice(coin.current_price)}</p>
+                    <p class="change ${coin.price_change_percentage_24h > 0 ? 'positive' : 'negative'}">
+                        ${coin.price_change_percentage_24h.toFixed(2)}%
+                    </p>
+                </div>
+            </div>
+        </div>
+    `).join('');
+    
+    coinGridContainer.innerHTML += additionalHtml;
+    document.querySelector('.see-all-container').style.display = 'none';
+});
 
 async function initializeApp() {
     try {

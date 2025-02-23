@@ -526,3 +526,35 @@ main {
         display: none;
     }
 }
+
+.section-heading {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--primary);
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 4rem 0 2rem 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.see-all-container {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.see-all-button {
+    font-family: 'Orbitron', sans-serif;
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.see-all-button:hover {
+    background: var(--primary);
+    color: var(--bg);
+}
