@@ -94,7 +94,19 @@ function updateTickerContent(coins) {
     document.getElementById('ticker-content-clone').innerHTML = tickerContent;
 }
 
-document.addEventListener('DOMContentLoaded', initializeApp);
+document.addEventListener('DOMContentLoaded', () => {
+    initializeApp();
+    initializeMobileMenu();
+});
+
+function initializeMobileMenu() {
+    const mobileMenuButton = document.querySelector('.mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+    
+    mobileMenuButton.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+}
 
 async function copyText(text) {
     try {

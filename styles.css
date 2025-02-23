@@ -394,3 +394,135 @@ main {
     background: var(--primary);
     color: var(--bg);
 }
+
+@media screen and (max-width: 768px) {
+    .nav-container {
+        padding: 0 1rem;
+    }
+    
+    .logo {
+        font-size: 20px;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+    
+    .top-performers {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+    
+    .top-coin {
+        width: 90%;
+        height: auto !important;
+        transform: none !important;
+    }
+    
+    .coin-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+    
+    .stock-ticker {
+        font-size: 12px;
+    }
+    
+    .copy-button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav-container {
+        padding: 0 0.5rem;
+    }
+    
+    .nav-links {
+        display: none; /* Hide nav links on mobile */
+    }
+    
+    .copy-button {
+        font-size: 10px;
+        padding: 6px 8px;
+    }
+    
+    .top-coin {
+        padding: 1rem;
+        margin: 0 0.5rem;
+    }
+    
+    .coin-card {
+        padding: 1rem;
+    }
+    
+    .coin-card-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .coin-details {
+        width: 100%;
+    }
+    
+    .stock-ticker {
+        font-size: 10px;
+        padding-block: 4px;
+    }
+    
+    .nav-links a {
+        font-size: 14px;
+    }
+    
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+    
+    .top-coin img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .coin-info h2 {
+        font-size: 1.4rem;
+    }
+}
+
+/* Add hamburger menu styles for mobile */
+.mobile-menu {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--primary);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: var(--header-bg);
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media screen and (max-width: 480px) {
+    .mobile-menu {
+        display: block;
+    }
+    
+    .nav-links {
+        display: none;
+    }
+}
